@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传图片</title>
+</head>
+<body>
+    <h1>提示：将自拍照和二维码分别改为—>学号a.jpg和学号b.jpg</h1>
+     <form method="POST" action="/myweb/upLoad/" enctype="multipart/form-data">
+         {%csrf_token%}
+         {# application/x-www-form-urlencoded:  username='123'&password='456' 适合文本 #}
+         {# multipart/form-data: 以指定的分隔符对上传数据进行分割 适合二进制文件 #}
+         {# 上传图片相当于上传数据，一定要使用POST请求，并且要指定一个属性enctype #}
+        请选择上传文件：<input type="file" name="picture" ><br>
+        <input type="submit" value="上传"  style="padding: 10px 20px;color: #5bc0de;">
+
+        <br>
+    </form>
+   <a href="/myweb/" ><button style="padding: 10px 20px;color: #5bc0de;">返回</button></a>
+</body>
+</html>

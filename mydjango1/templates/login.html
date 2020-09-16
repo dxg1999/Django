@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>查询</title>
+    <style>
+        .title_crm{
+            width: 100%;
+            height: 10%;
+            color: white;
+            position: absolute;
+            text-align: center;
+            margin-top: 5%;
+            margin-left: 0%;
+            font-size: 90px;
+        }
+        .quanju{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background:url("/static/img/bkg.jpg");
+            background-size: cover;
+        }
+        .chaxun{
+            width: 70%;
+            height: 35%;
+            padding: 20px;
+            position: relative;
+            margin-top: 30%;
+            margin-left:13%;
+            color: white;
+        }
+        .b{
+            position: absolute;
+            text-align: center;
+            background-color: #1E9FFF;
+            color: white;
+            border:1px white;
+            width: 40%;
+            height: 15%;
+            font-size: 40px;
+            margin-top: 80px;
+            margin-left: 170px;
+        }
+        .text{
+            font-size: 60px;
+            width: 45%;
+            height: 10%;
+        }
+        .number-in{
+            position: absolute;
+            width: 50%;
+            height:10%;
+            margin-top: 0%;
+            margin-left: 17%;
+            font-size: 30px;
+        }
+        .cd-in{
+            position: absolute;
+            width: 51%;
+            height:11%;
+            margin-top: -10%;
+            margin-left: 42%;
+            font-size: 30px;
+        }
+        .jc-in{
+            position: absolute;
+            width: 51%;
+            height:11%;
+            margin-top: -10%;
+            margin-left: 42%;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quanju">
+        <h1 class="title_crm">出入码登录</h1>
+        <div class="chaxun">
+        <form action="/myweb/queryByid/" method="POST" >
+        {%csrf_token%}
+        <div class="text">学号：<input class="number-in" name="id" value="{{ p1.id }}"></div><br>
+        <div class="text">场地名称：</div><select class="cd-in" name="cd">
+
+                <option>-请选择-</option>
+
+                <option>【校本部】南大门</option>
+
+                <option>【校本部】北大门</option>
+
+                <option>【校本部】东大门</option>
+
+                <option>【校本部】西大门</option>
+
+            </select><br>
+
+        <div class="text">进出类型：</div><select class="jc-in" name="jc">
+
+                <option>-请选择-</option>
+
+                <option>出</option>
+
+                <option>进</option>
+
+            </select><br>
+        <input type="submit" value="查询" class="b">
+        </form>
+        </div>
+    </div>
+</body>
+</html>

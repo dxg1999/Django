@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="renderer" content="webkit">
+    <link href="/static/css/index.css" rel="stylesheet">
+    <link href="/static/css/layer.css" rel="stylesheet">
+    <title>西南石油大学-疫情防控管理平台</title>
+<script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script></head>
+<body style="background-image: url(/static/img/debg.png); background-repeat: no-repeat; background-size: 100% 100%; background-attachment: fixed;" class="vsc-initialized">
+    
+
+<div class="logo">
+    <img src="/static/img/logo.png">
+</div>
+<div class="container">
+    <div class="pad">
+        <div class="infos">
+            <p class="title">西油出入码</p>
+            <p class="info">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：{{ p1.username }}</p>
+            <p class="info">学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：{{ p1.id }}</p>
+            <p class="info">所属学院：{{ p1.faculty }}</p>
+            <p class="info">场地名称：{{ cd }}</p>
+            <p class="info">进出类型：{{ jc }}</p>
+        <p class="info" id="time"></p>
+        </div>
+        <script>
+            // $(function(){
+                str = '';
+                var now = new Date();
+                var year = now.getFullYear();
+                var month = now.getMonth()+1;
+                var date = now.getDate();
+                var hour = now.getHours();
+                var minute = now.getMinutes();
+                if (month<10) month = '0'+month
+                if (date<10) date = '0'+date
+                if (hour<10) hour = '0'+hour
+                if (minute<10) minute = '0'+minute
+                str ='扫描时间：'+ year + '.' + month + '.'+ date +' '+hour+':'+minute
+                document.getElementById("time").innerHTML=str;
+            // })
+        </script>
+        <div class="codebox">
+                <div class="tempassimg">
+                    <img src="/static/img/{{ p1.code }}">
+                    <img src="/static/img/{{ p1.selfimg }}">
+                </div>
+            <div class="lb"></div>
+            <div class="rb"></div>
+        </div>
+    </div>
+</div>
+<link href="/static/css/MonitoringCard.css" rel="stylesheet">
+        <link href="/static/css/menustyle.css" rel="stylesheet">
+        <script src="./西南石油大学-疫情防控管理平台_files/menu.js.下载"></script>
+        <div id="cd-nav" class="is-fixed">
+            <a href="javascript:void(0)" class="cd-nav-trigger"><span></span></a>
+            <nav id="cd-main-nav">
+                <ul>
+                        <li>
+                            <a href="http://xg.swpu.edu.cn/SPCP/Web/Account/ChooseSys">
+                                <img src="/static/img/icon1.png"> 返回首页
+                            </a>
+                        </li>
+                                        <li>
+                        <a href="http://xg.swpu.edu.cn/SPCP/Web/Account/Logout">
+                            <img src="/static/img/icon3.png"> 安全退出
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+<!--第二版-->
+</body><div style="all: initial;"><div></div></div></html>

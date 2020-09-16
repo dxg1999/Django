@@ -1,0 +1,118 @@
+html, body {
+    height: 100%;
+}
+body {
+    background: url('../img/debg.png') no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.container { 
+    margin: auto; 
+    box-sizing: border-box;
+}
+.pad {
+    padding: 8%;
+}
+
+.pad .codebox {
+    border-radius: 0 0 6px 6px;
+    position: relative;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 20px;
+    border-top: 1px dashed #333333;
+}
+
+
+.pad .codebox .codeimg {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+}
+
+.pad .codebox .tempassimg
+{
+    height:200px;
+     margin: auto;
+}
+.pad .codebox .codeimg img {
+    width: 200px;
+    height: 200px;
+}
+    .pad .codebox .tempassimg img:first-child {
+        float: left;
+        height: 145px;
+    }
+    .pad .codebox .tempassimg img:last-child {
+        height: 131px;
+        float: right;
+        padding-top: 13px;
+    } 
+
+.pad .codebox .lb {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #00247e;
+    top: -10px;
+    left: -10px;
+}
+
+.pad .codebox .rb {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #00247e;
+    top: -10px;
+    right: -10px;
+}
+
+.pad .infos {
+    padding: 20px 40px;
+    border-radius: 6px 6px 0 0;
+    background: #fff; 
+    position:relative;
+    text-align:center;
+}
+.pad .infos .title {
+    margin: 0 0 12px 0;
+    text-align: center;
+    color: #333333;
+    font-size: 26px;
+}
+.pad .infos .avatar{
+    width:70px;
+    height:70px;
+    display:inline-block;
+    margin-bottom:6px;
+    /*outline:1px solid black;*/
+    border-radius:50%;
+}
+.pad .infos .avatar img{
+    width:70px;
+    height:70px;
+    display:block;
+    border-radius:100px;
+}
+    .pad .infos .avatar-rect {
+        width: 95px;
+        height: 116px;
+        position: absolute;
+        display: block;
+        right: 30px;
+        top: 80px;
+    }
+.pad .infos .avatar-rect img{
+    width:100%;
+    height:100%;
+}
+.pad .infos .info {
+    color: #333333;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: left;
+    font-weight: bold;
+}
